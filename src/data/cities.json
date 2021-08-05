@@ -1,0 +1,650 @@
+[
+  {
+    "city": "ADANA",
+    "geocoding": {
+        "lat": "37",
+        "lon": "35,321333"
+    }
+    
+  },
+  {
+    "city": "ADIYAMAN",
+    "geocoding": {
+        "lat": "37,764751",
+        "lon": "38,278561"
+    }
+    
+  },
+  {
+    "city": "AFYONKARAHİSAR",
+    "geocoding": {
+        "lat": "38,750714",
+        "lon": "30,556692"
+    }
+    
+  },
+  {
+    "city": "AĞRI",
+    "geocoding": {
+        "lat": "39,626922",
+        "lon": "43021596"
+    }
+    
+  },
+  {
+    "city": "AKSARAY",
+    "geocoding": {
+        "lat": "38,36869",
+        "lon": "34,03698"
+    }
+    
+  },
+  {
+    "city": "AMASYA",
+    "geocoding": {
+        "lat": "40,64991",
+        "lon": "35,83532"
+    }
+    
+  },
+  {
+    "city": "ANKARA",
+    "geocoding": {
+        "lat": "39,92077",
+        "lon": "32,85411"
+    }
+    
+  },
+  {
+    "city": "ANTALYA",
+    "geocoding": {
+        "lat": "36,88414",
+        "lon": "30,70563"
+    }
+    
+  },
+  {
+    "city": "ARDAHAN",
+    "geocoding": {
+        "lat": "41,110481",
+        "lon": "42,702171"
+    }
+    
+  },
+  {
+    "city": "ARTVİN",
+    "geocoding": {
+        "lat": "41,18277",
+        "lon": "41,818292"
+    }
+    
+  },
+  {
+    "city": "AYDIN",
+    "geocoding": {
+        "lat": "37,856041",
+        "lon": "27,841631"
+    }
+    
+  },
+  {
+    "city": "BALIKESİR",
+    "geocoding": {
+        "lat": "39,648369",
+        "lon": "27,88261"
+    }
+    
+  },
+  {
+    "city": "BARTIN",
+    "geocoding": {
+        "lat": "41,581051",
+        "lon": "32,460979"
+    }
+    
+  },
+  {
+    "city": "BATMAN",
+    "geocoding": {
+        "lat": "37,881168",
+        "lon": "41,13509"
+    }
+    
+  },
+  {
+    "city": "BAYBURT",
+    "geocoding": {
+        "lat": "40,255169",
+        "lon": "40,22488"
+    }
+    
+  },
+  {
+    "city": "BİLECİK",
+    "geocoding": {
+        "lat": "40,056656",
+        "lon": "30,066524"
+    }
+    
+  },
+  {
+    "city": "BİNGÖL",
+    "geocoding": {
+        "lat": "39,062635",
+        "lon": "40,76961"
+    }
+    
+  },
+  {
+    "city": "BİTLİS",
+    "geocoding": {
+        "lat": "38,393799",
+        "lon": "42,12318"
+    }
+    
+  },
+  {
+    "city": "BOLU",
+    "geocoding": {
+        "lat": "40,575977",
+        "lon": "31,578809"
+    }
+    
+  },
+  {
+    "city": "BURDUR",
+    "geocoding": {
+        "lat": "37,461267",
+        "lon": "30,066524"
+    }
+    
+  },
+  {
+    "city": "BURSA",
+    "geocoding": {
+        "lat": "40,266864",
+        "lon": "29,063448"
+    }
+    
+  },
+  {
+    "city": "ÇANAKKALE",
+    "geocoding": {
+        "lat": "40,155312",
+        "lon": "26,41416"
+    }
+    
+  },
+  {
+    "city": "ÇANKIRI",
+    "geocoding": {
+        "lat": "40,601343",
+        "lon": "33,613421"
+    }
+    
+  },
+  {
+    "city": "ÇORUM",
+    "geocoding": {
+        "lat": "40,550556",
+        "lon": "34,955556"
+    }
+    
+  },
+  {
+    "city": "DENİZLİ",
+    "geocoding": {
+        "lat": "37,77652",
+        "lon": "29,08639"
+    }
+    
+  },
+  {
+    "city": "DİYARBAKIR",
+    "geocoding": {
+        "lat": "37,91441",
+        "lon": "40,230629"
+    }
+    
+  },
+  {
+    "city": "DÜZCE",
+    "geocoding": {
+        "lat": "40,843849",
+        "lon": "31,15654"
+    }
+    
+  },
+  {
+    "city": "EDİRNE",
+    "geocoding": {
+        "lat": "41,681808",
+        "lon": "26,562269"
+    }
+    
+  },
+  {
+    "city": "ELAZIĞ",
+    "geocoding": {
+        "lat": "38,680969",
+        "lon": "39,226398"
+    }
+    
+  },
+  {
+    "city": "ERZİNCAN",
+    "geocoding": {
+        "lat": "39,75",
+        "lon": "39,5"
+    }
+    
+  },
+  {
+    "city": "ERZURUM",
+    "geocoding": {
+        "lat": "39,9",
+        "lon": "41,27"
+    }
+    
+  },
+  {
+    "city": "ESKİŞEHİR",
+    "geocoding": {
+        "lat": "39,776667",
+        "lon": "30,520556"
+    }
+    
+  },
+  {
+    "city": "GAZİANTEP",
+    "geocoding": {
+        "lat": "37,06622",
+        "lon": "37,38332"
+    }
+    
+  },
+  {
+    "city": "GİRESUN",
+    "geocoding": {
+        "lat": "40,912811",
+        "lon": "38,38953"
+    }
+    
+  },
+  {
+    "city": "GÜMÜŞHANE",
+    "geocoding": {
+        "lat": "40,438588",
+        "lon": "39,508556"
+    }
+    
+  },
+  {
+    "city": "HAKKARİ",
+    "geocoding": {
+        "lat": "37,583333",
+        "lon": "43,733333"
+    }
+    
+  },
+  {
+    "city": "HATAY",
+    "geocoding": {
+        "lat": "36,401849",
+        "lon": "36,34981"
+    }
+    
+  },
+  {
+    "city": "IĞDIR",
+    "geocoding": {
+        "lat": "39,887984",
+        "lon": "44,004836"
+    }
+    
+  },
+  {
+    "city": "ISPARTA",
+    "geocoding": {
+        "lat": "37,764771",
+        "lon": "30,556561"
+    }
+    
+  },
+  {
+    "city": "İSTANBUL",
+    "geocoding": {
+        "lat": "41,00527",
+        "lon": "28,97696"
+    }
+    
+  },
+  {
+    "city": "İZMİR",
+    "geocoding": {
+        "lat": "38,41885",
+        "lon": "27,12872"
+    }
+    
+  },
+  {
+    "city": "KAHRAMANMARAŞ",
+    "geocoding": {
+        "lat": "37,585831",
+        "lon": "36,937149"
+    }
+    
+  },
+  {
+    "city": "KARABÜK",
+    "geocoding": {
+        "lat": "41,2061",
+        "lon": "32,62035"
+    }
+    
+  },
+  {
+    "city": "KARAMAN",
+    "geocoding": {
+        "lat": "37,17593",
+        "lon": "33,228748"
+    }
+    
+  },
+  {
+    "city": "KARS",
+    "geocoding": {
+        "lat": "40,616667",
+        "lon": "43,1"
+    }
+    
+  },
+  {
+    "city": "KASTAMONU",
+    "geocoding": {
+        "lat": "41,38871",
+        "lon": "33,78273"
+    }
+    
+  },
+  {
+    "city": "KAYSERİ",
+    "geocoding": {
+        "lat": "38,73122",
+        "lon": "35,478729"
+    }
+    
+  },
+  {
+    "city": "KIRIKKALE",
+    "geocoding": {
+        "lat": "39,846821",
+        "lon": "33,515251"
+    }
+    
+  },
+  {
+    "city": "KIRKLARELİ",
+    "geocoding": {
+        "lat": "41,733333",
+        "lon": "27,216667"
+    }
+    
+  },
+  {
+    "city": "KIRŞEHİR",
+    "geocoding": {
+        "lat": "39,14249",
+        "lon": "34,17091"
+    }
+    
+  },
+  {
+    "city": "KİLİS",
+    "geocoding": {
+        "lat": "36,718399",
+        "lon": "37,12122"
+    }
+    
+  },
+  {
+    "city": "KOCAELİ",
+    "geocoding": {
+        "lat": "40,85327",
+        "lon": "29,88152"
+    }
+    
+  },
+  {
+    "city": "KONYA",
+    "geocoding": {
+        "lat": "37,866667",
+        "lon": "32,483333"
+    }
+    
+  },
+  {
+    "city": "KÜTAHYA",
+    "geocoding": {
+        "lat": "39,416667",
+        "lon": "29,983333"
+    }
+    
+  },
+  {
+    "city": "MALATYA",
+    "geocoding": {
+        "lat": "38,35519",
+        "lon": "38,30946"
+    }
+    
+  },
+  {
+    "city": "MANİSA",
+    "geocoding": {
+        "lat": "38,619099",
+        "lon": "27,428921"
+    }
+    
+  },
+  {
+    "city": "MARDİN",
+    "geocoding": {
+        "lat": "37,321163",
+        "lon": "40,724477"
+    }
+    
+  },
+  {
+    "city": "MERSİN",
+    "geocoding": {
+        "lat": "36,8",
+        "lon": "34,633333"
+    }
+    
+  },
+  {
+    "city": "MUĞLA",
+    "geocoding": {
+        "lat": "37,215278",
+        "lon": "28,363611"
+    }
+    
+  },
+  {
+    "city": "MUŞ",
+    "geocoding": {
+        "lat": "38,946189",
+        "lon": "41,753893"
+    }
+    
+  },
+  {
+    "city": "NEVŞEHİR",
+    "geocoding": {
+        "lat": "38,69394",
+        "lon": "34,685651"
+    }
+    
+  },
+  {
+    "city": "NİĞDE",
+    "geocoding": {
+        "lat": "37,966667",
+        "lon": "34,683333"
+    }
+    
+  },
+  {
+    "city": "ORDU",
+    "geocoding": {
+        "lat": "40,983879",
+        "lon": "37,876411"
+    }
+    
+  },
+  {
+    "city": "OSMANİYE",
+    "geocoding": {
+        "lat": "37,213026",
+        "lon": "36,176261"
+    }
+    
+  },
+  {
+    "city": "RİZE",
+    "geocoding": {
+        "lat": "41,02005",
+        "lon": "40,523449"
+    }
+    
+  },
+  {
+    "city": "SAKARYA",
+    "geocoding": {
+        "lat": "40,693997",
+        "lon": "30,435763"
+    }
+    
+  },
+  {
+    "city": "SAMSUN",
+    "geocoding": {
+        "lat": "41,292782",
+        "lon": "36,33128"
+    }
+    
+  },
+  {
+    "city": "SİİRT",
+    "geocoding": {
+        "lat": "37,933333",
+        "lon": "41,95"
+    }
+    
+  },
+  {
+    "city": "SİNOP",
+    "geocoding": {
+        "lat": "42,02314",
+        "lon": "35,153069"
+    }
+    
+  },
+  {
+    "city": "SİVAS",
+    "geocoding": {
+        "lat": "39,747662",
+        "lon": "37,017879"
+    }
+    
+  },
+  {
+    "city": "ŞANLIURFA",
+    "geocoding": {
+        "lat": "37,159149",
+        "lon": "38,796909"
+    }
+    
+  },
+  {
+    "city": "ŞIRNAK",
+    "geocoding": {
+        "lat": "37,418748",
+        "lon": "42,491834"
+    }
+    
+  },
+  {
+    "city": "TEKİRDAĞ",
+    "geocoding": {
+        "lat": "40,983333",
+        "lon": "27,516667"
+    }
+    
+  },
+  {
+    "city": "TOKAT",
+    "geocoding": {
+        "lat": "40,316667",
+        "lon": "36,55"
+    }
+    
+  },
+  {
+    "city": "TRABZON",
+    "geocoding": {
+        "lat": "41,00145",
+        "lon": "39,7178"
+    }
+    
+  },
+  {
+    "city": "TUNCELİ",
+    "geocoding": {
+        "lat": "39,307355",
+        "lon": "39,438778"
+    }
+    
+  },
+  {
+    "city": "UŞAK",
+    "geocoding": {
+        "lat": "38,682301",
+        "lon": "29,40819"
+    }
+    
+  },
+  {
+    "city": "VAN",
+    "geocoding": {
+        "lat": "38,48914",
+        "lon": "43,40889"
+    }
+    
+  },
+  {
+    "city": "YALOVA",
+    "geocoding": {
+        "lat": "40,65",
+        "lon": "29,266667"
+    }
+    
+  },
+  {
+    "city": "YOZGAT",
+    "geocoding": {
+        "lat": "39,818081",
+        "lon": "34,81469"
+    }
+    
+  },
+  {
+    "city": "ZONGULDAK",
+    "geocoding": {
+        "lat": "41,456409",
+        "lon": "31,798731"
+    }
+    
+  }
+]
