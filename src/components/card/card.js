@@ -1,7 +1,7 @@
 function Card({data}) {
     return(
         <div>
-            {JSON.stringify(data)}
+            
         </div>
     )
 }

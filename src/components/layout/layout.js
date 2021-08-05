@@ -17,63 +17,40 @@ function Layout () {
     useEffect(() => {
 
         setIsLoading(true)
+        
         const lat = city && city.geocoding.lat
         const lon = city && city.geocoding.lon
 
         axios({
             method: 'get',
-            url: `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${key}`,
-            responseType: 'stream'
+            url: `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${key}`
         })
         .then((response) => {
             setData(response.data)
             setIsLoading(false)
         })
         .catch((e) => {
+            console.log(e.message)
             setIsLoading(false)
         })
-
-        console.log(data)
-
+        
     }, [city])
 
     useEffect(() => {
+
+        const rootCity = "İstanbul"
         inputRef.current.disabled = isLoading
-        console.log(inputRef.current.disabled)
-    })
 
-    const turkishCase = function(text, change){
-        let string = text;
-        const lettersLow = { "İ": "i", "I": "ı", "Ş": "ş", "Ğ": "ğ", "Ü": "ü", "Ö": "ö", "Ç": "ç" };
-        const lettersUp = { "i": "İ", "ş": "Ş", "ğ": "Ğ", "ü": "Ü", "ö": "Ö", "ç": "Ç", "ı": "I" };
+        if(!city) { 
+            inputRef.current.value = rootCity
+            const searchResult = cities.find(s => s.city === rootCity)
+            searchResult && setCity(searchResult)
+        }
         
-        if(change === "low") {
-            string = string.replace(/(([İIŞĞÜÇÖ]))/g, function(letter){ return lettersLow[letter]; })
-            return string.toLowerCase();
-        }
-        if(change === "up") {
-            string = string.replace(/(([iışğüçö]))/g, function(letter){ return lettersUp[letter]; })
-            return string.toUpperCase();
-        }
-
-    }
-
-    const toLover = (text) => {
-        const arrText = text.split("")
-        let newText = ""
-
-        arrText.map((value, index) => {
-            index != 0 ? 
-                newText += turkishCase(value, "low")
-            : 
-                newText += value
-        })
-    
-        return newText
-    }   
+    }) 
 
     const handleChance = (e) => {
-        const searchResult = cities.find(s => s.city == turkishCase(e.target.value, "up"))
+        const searchResult = cities.find(s => s.city === e.target.value)
 
         searchResult && setCity(searchResult)
     }
@@ -84,14 +61,14 @@ function Layout () {
             <datalist id="brow">
                 {
                     cities.map((value) => {
-                        return <option key={`city:${value.city}`} value={toLover(value.city)}/>
+                        return <option key={`city:${value.city}`} value={value.city}/>
                     })
                 }
             </datalist>
 
             {
-                data && Object.entries(data).map((value, index) => {
-                    return <Card key={index} data={value}/>
+                data && data.daily.map((value) => {
+                    return <Card key={value.temp.day} data={value}/>
                 })
             }
 
