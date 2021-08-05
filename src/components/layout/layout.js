@@ -33,19 +33,29 @@ function Layout () {
             setIsLoading(false)
         })
 
+        console.log(data)
+
     }, [city])
 
-    const handleChance = (e) => {
-        const searchResult = cities.find(s => s.city == e.target.value)
+    useEffect(() => {
+        inputRef.current.disabled = isLoading
+        console.log(inputRef.current.disabled)
+    })
 
-        searchResult && setCity(searchResult)
-    }
+    const turkishCase = function(text, change){
+        let string = text;
+        const lettersLow = { "İ": "i", "I": "ı", "Ş": "ş", "Ğ": "ğ", "Ü": "ü", "Ö": "ö", "Ç": "ç" };
+        const lettersUp = { "i": "İ", "ş": "Ş", "ğ": "Ğ", "ü": "Ü", "ö": "Ö", "ç": "Ç", "ı": "I" };
+        
+        if(change === "low") {
+            string = string.replace(/(([İIŞĞÜÇÖ]))/g, function(letter){ return lettersLow[letter]; })
+            return string.toLowerCase();
+        }
+        if(change === "up") {
+            string = string.replace(/(([iışğüçö]))/g, function(letter){ return lettersUp[letter]; })
+            return string.toUpperCase();
+        }
 
-    const turkishToLower = function(text){
-        var string = text;
-        var letters = { "İ": "i", "I": "ı", "Ş": "ş", "Ğ": "ğ", "Ü": "ü", "Ö": "ö", "Ç": "ç" };
-        string = string.replace(/(([İIŞĞÜÇÖ]))/g, function(letter){ return letters[letter]; })
-        return string.toLowerCase();
     }
 
     const toLover = (text) => {
@@ -54,7 +64,7 @@ function Layout () {
 
         arrText.map((value, index) => {
             index != 0 ? 
-                newText += turkishToLower(value)
+                newText += turkishCase(value, "low")
             : 
                 newText += value
         })
@@ -62,25 +72,26 @@ function Layout () {
         return newText
     }   
 
+    const handleChance = (e) => {
+        const searchResult = cities.find(s => s.city == turkishCase(e.target.value, "up"))
+
+        searchResult && setCity(searchResult)
+    }
+
     return(
         <div>
             <input list="brow" onChange={handleChance} ref={inputRef}/>
             <datalist id="brow">
                 {
                     cities.map((value) => {
-                        const text = toLover(value.city)
-                        return <option key={`city:${value.city}`} value={value.city}/>
+                        return <option key={`city:${value.city}`} value={toLover(value.city)}/>
                     })
                 }
             </datalist>
 
             {
-                JSON.stringify(isLoading)
-            }
-
-            {
-                data && Object.entries(data).map((value) => {
-                    return <Card data={value}/>
+                data && Object.entries(data).map((value, index) => {
+                    return <Card key={index} data={value}/>
                 })
             }
 
