@@ -7,20 +7,16 @@
 .box{
     width: 80vw;
     height: 80vh;
-    background: rgb(152 152 152 / 28%);
-    backdrop-filter: saturate(180%) blur(10px);
+    background: #9c9c9c45;
     padding: 20px;
     box-sizing: border-box;
-    border: 1px solid black;
     border-radius: 30px;
-    border-color: #629bd2;
-    box-shadow: 13px 10px 22px 0 rgb(0 0 0 / 5%), 6px 6px 6px 0 rgb(0 0 0 / 24%);
 }
 .head{
     display: flex;
     align-items: center;
     flex-direction: column;
-    border: 0px solid #2196f3;
+    border: 0px solid var(--border-color);
     padding-bottom: 20px;
     border-bottom-width: 1px;
 }
@@ -32,12 +28,12 @@
 }
 .input{
     outline: none;
-    border: 1px solid #2196f3;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 5px 10px;
     color: #2b2b2b;
     font-weight: 600;
-    background: transparent;
+    background: ffffffcc;
 }
 .input::-webkit-calendar-picker-indicator {
     display: none;

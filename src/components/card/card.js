@@ -1,25 +1,103 @@
-import { useCity } from '../../hooks/useCity'
+import cn from 'classnames'
 import Style from './card.module.css'
+import {
+    Compass,
+    Svg01D,
+    Svg01N,
+    Svg02D,
+    Svg02N,
+    Svg03,
+    Svg04,
+    Svg09,
+    Svg10,
+    Svg11,
+    Svg13,
+    Up} from '../icons'
 
-function Card({data}) {
+function FirstCard ({morn, day, eve, night, humidity, windSpeed, windDeg}) {
 
-    const {city, setCity} = useCity()
-    console.log(data.weather[0].description)
+
+    const style = {
+        transform: `rotateZ(${windDeg}deg) rotateY(50deg)`
+    }
+    return(
+        <>
+            <div className={Style.firstCard}>
+                <div className={Style.items}>
+                    <span className={Style.text}><span>Sabah: </span>{`${Math.round(morn)}°`}</span>
+                    <span className={Style.text}><span>Öğle: </span>{`${Math.round(day)}°`}</span>
+                    <span className={Style.text}><span>Akşam: </span>{`${Math.round(eve)}°`}</span>
+                    <span className={Style.text}><span>Gece: </span>{`${Math.round(night)}°`}</span>
+                </div>
+            </div>
+            <div className={Style.firstCard}>
+                <div className={Style.items}>
+                    <span className={Style.text}><span>Nem: </span>{`${Math.round(humidity)}%`}</span>
+                    <span className={Style.text}><span>Rüzgar hızı: </span>{`${Math.round(windSpeed)} m/s`}</span>
+                    <span className={cn(Style.text, Style.deg)}>Rüzgar yönü: <div className={Style.degIcon}><Compass/> <Up style={style}/></div></span>
+                </div>
+            </div>
+        </>
+    )
+} 
+
+function Card({data, index}) {
+
+    const dataObject = new Date(data.dt * 1000)
+
+    const mount = dataObject.toLocaleString(window.navigator.language, {month: "long"})
+    const dayNumeric = dataObject.toLocaleString(window.navigator.language, {day: "numeric"})
+    const day = dataObject.toLocaleString(window.navigator.language, {weekday: 'long'})
 
     return(
         <div className={Style.card}>
             <div className={Style.content}>
+                <div className={Style.items}>
 
-                <span className={Style.day}>Wed</span>
+                    <span className={Style.day}>{`${dayNumeric} ${mount} ${day}`}</span>
 
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cloud" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                    <path fill="currentColor" d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4z"></path>
-                </svg>
+                    {
+                        data.weather[0].icon == "01d" ? 
+                            <Svg01D/>
+                        : data.weather[0].icon == "01n" ? 
+                            <Svg01N/>
+                        : data.weather[0].icon == "02d" ? 
+                            <Svg02D/>
+                        : data.weather[0].icon == "02n" ? 
+                            <Svg02N/>
+                        : data.weather[0].icon == "03d" || data.weather[0].icon == "03n"  ? 
+                            <Svg03/>
+                        : data.weather[0].icon == "04d" || data.weather[0].icon == "04n"  ? 
+                            <Svg04/>
+                        : data.weather[0].icon == "09d" || data.weather[0].icon == "09n"  ? 
+                            <Svg09/>
+                        : data.weather[0].icon == "10d" || data.weather[0].icon == "10n"  ? 
+                            <Svg10/>
+                        : data.weather[0].icon == "11d" || data.weather[0].icon == "11n"  ? 
+                            <Svg11/>
+                        : data.weather[0].icon == "13d" || data.weather[0].icon == "13n"  &&
+                            <Svg13/>
+                    }
 
-                <span className={Style.lowC}><span>Hi: </span>80°</span>
-                <span className={Style.upC}><span>Lo: </span>50°</span>
+                    <span className={Style.text}><span>En düşük: </span>{`${Math.round(data.temp.min)}°`}</span>
+                    <span className={Style.text}><span>En yüksek: </span>{`${Math.round(data.temp.max)}°`}</span>
 
-            </div>
+                </div>
+
+                {
+                    index == 0 && <FirstCard 
+                                    morn={data.temp.morn}
+                                    day={data.temp.day}
+                                    eve={data.temp.eve}
+                                    night={data.temp.night}
+                                    humidity={data.humidity}
+                                    windSpeed={data.wind_speed}
+                                    windDeg={data.wind_deg}
+                                />
+                        
+                }
+
+            </div>  
         </div>
     )
 }

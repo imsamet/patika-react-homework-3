@@ -35,19 +35,24 @@ function Layout () {
         
         const lat = city && city.geocoding.lat
         const lon = city && city.geocoding.lon
+        const units = "metric"
+        const exclude = "hourly,minutely,current"
 
         axios({
             method: 'get',
-            url: `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${key}`
+            url: `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=${units}&exclude=${exclude}&appid=${key}`
         })
         .then((response) => {
-            setWeather(response.data)
+            const addWeather = response.data.daily.splice(0, 7)
+            setWeather(addWeather)
             setIsLoading(false)
         })
         .catch((e) => {
             console.log(e.message)
             setIsLoading(false)
         })
+
+        console.log(weather)
     }, [city])
 
     useEffect(() => {
@@ -82,8 +87,12 @@ function Layout () {
                 <div className={Style.content}>
 
                     {
-                        weather && weather.daily.map((value) => {
-                            return <Card key={value.temp.day} data={value}/>
+                        weather && weather.map((value, index) => {
+                            return <Card 
+                                        key={value.temp.day} 
+                                        data={value}
+                                        index={index}
+                                    />
                         })
                     }
                 
